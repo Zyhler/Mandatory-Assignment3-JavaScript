@@ -5,20 +5,26 @@ Vue.createApp({
             name: null,
             message: null,
             textRepeated:null,
-            Numberinput:null
+            numberInput:null,
+            numCheck:null
         }
     },
     methods: {
-        RepeatXTimes(textinput,Numberinput)
+        RepeatXTimes(textinput,numberInput)
         {
+            var numCheck = parseInt(numberInput); // if u input a number and then text after it will just return the number, if u write text and then number it will give a blank number
             if (!textinput)
+            {
             this.message = "Write something";
-            else if(Numberinput<0 || !Numberinput)
-            this.message = "Please choose a positive number";
+            }
+            else if(!numCheck)
+            this.message = "Please choose a number " ;
+            else if(numCheck<0)
+            this.message = "Please choose a positive number ";
             else
             {
                 textRepeated="";
-                for(i=0;i<Numberinput;i++)
+                for(i=0;i<numCheck;i++)
                 {
                     textRepeated += textinput;
                 }
