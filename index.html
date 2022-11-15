@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Assignment 3</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>Assignment 3</h1>
+    </div>
+
+    <div id="app">
+        <p>Message:
+        <input id="inputField" v-model="textinput" placeholder="Write a sentence">
+        How many times:
+        <input id="inputFieldNumber" v-model="Numberinput" placeholder="Write a Number">
+        <button id="button" v-on:click="RepeatXTimes(textinput,Numberinput)" class="btn btn-primary">Do it!</button>
+        </p>
+    <div id="outputField" > {{message}}</div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
